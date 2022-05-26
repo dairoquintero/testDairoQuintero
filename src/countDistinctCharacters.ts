@@ -13,12 +13,12 @@ export function countDistinctCharacters(word: string) {
     let arrayWord = Array<string>();
     arrayWord = word.split('');
     let countDinstinc = Array<string>(3);
-    let mySetArray = new Set(word.toLocaleLowerCase().split(''));
+    let mySetArray = new Set(word.slice(1,arrayWord.length-1).toLocaleLowerCase().split(''));
     //select first letter and last
     countDinstinc[0] = arrayWord[0];
     countDinstinc[2] = arrayWord[arrayWord.length - 1];
     //exclude in the count the first and last letter
-    countDinstinc[1] = (mySetArray.size - 2).toString();
+    countDinstinc[1] = (mySetArray.size).toString();
     return countDinstinc.join('');
   }
   else return 'The word should have only alphabetic characters and only 1 word'
