@@ -1,3 +1,13 @@
+ /**
+  * This method parses a word and returns the word with the following:
+  * first letter, number of distinct characters between first and last character, and last letter
+  * Example Smooth --> S3h
+  * The word should have contain alphabetic characters
+  * When the word not contains only alphabetic characters send a message
+  * for request a valid word
+  * @param {string} word
+  */
+
 export function countDistinctCharacters(word: string) {
   if (onlyLetters(word) === true) {
     let arrayWord = Array<string>();
